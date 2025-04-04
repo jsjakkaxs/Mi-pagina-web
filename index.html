@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras de Control en JavaScript</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: blue; }
+        h2 { color: darkred; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+    <h1>Estructuras de Control en JavaScript</h1>
+    
+    <h2>Bucle for</h2>
+    <p>Ejemplo 1: Contar del 1 al 5</p>
+    <pre>
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+    </pre>
+
+    <p>Ejemplo 2: Sumar los primeros 10 números</p>
+    <pre>
+let suma = 0;
+for (let i = 1; i <= 10; i++) {
+    suma += i;
+}
+console.log("Suma total:", suma);
+    </pre>
+
+    <p>Ejemplo 3: Recorrer un array de nombres</p>
+    <pre>
+let nombres = ["Luis", "Ana", "Carlos"];
+for (let i = 0; i < nombres.length; i++) {
+    console.log(nombres[i]);
+}
+    </pre>
+
+    <h2>Bucle while</h2>
+    <p>Ejemplo 1: Contar regresivamente del 5 al 1</p>
+    <pre>
+let j = 5;
+while (j > 0) {
+    console.log(j);
+    j--;
+}
+    </pre>
+
+    <p>Ejemplo 2: Pedir un número hasta que sea mayor a 10</p>
+    <pre>
+let num;
+while (num <= 10) {
+    num = parseInt(prompt("Ingresa un número mayor a 10: "));
+}
+console.log("Número aceptado:", num);
+    </pre>
+
+    <p>Ejemplo 3: Leer elementos de un array</p>
+    <pre>
+let frutas = ["Manzana", "Pera", "Naranja"];
+let index = 0;
+while (index < frutas.length) {
+    console.log(frutas[index]);
+    index++;
+}
+    </pre>
+
+    <h2>Bucle do...while</h2>
+    <p>Ejemplo 1: Pedir un número mayor a 10</p>
+    <pre>
+let numero;
+do {
+    numero = parseInt(prompt("Escribe un número mayor a 10: "));
+} while (numero <= 10);
+console.log("Número aceptado:", numero);
+    </pre>
+
+    <p>Ejemplo 2: Contador hasta 3</p>
+    <pre>
+let contador = 1;
+do {
+    console.log("Iteración:", contador);
+    contador++;
+} while (contador <= 3);
+    </pre>
+
+    <p>Ejemplo 3: Generar números aleatorios hasta obtener un 6</p>
+    <pre>
+let dado;
+do {
+    dado = Math.floor(Math.random() * 6) + 1;
+    console.log("Número generado:", dado);
+} while (dado !== 6);
+console.log("¡Sacaste un 6!");
+    </pre>
+
+    <h2>Bucle for...in</h2>
+    <p>Ejemplo 1: Recorrer un objeto persona</p>
+    <pre>
+const persona = { nombre: "Luis", edad: 17, ciudad: "México" };
+for (let clave in persona) {
+    console.log(`${clave}: ${persona[clave]}`);
+}
+    </pre>
+
+    <p>Ejemplo 2: Recorrer un objeto de calificaciones</p>
+    <pre>
+const calificaciones = { matemáticas: 9, historia: 8, inglés: 10 };
+for (let materia in calificaciones) {
+    console.log(`${materia}: ${calificaciones[materia]}`);
+}
+    </pre>
+
+    <p>Ejemplo 3: Recorrer un objeto con diferentes tipos de datos</p>
+    <pre>
+const datos = { nombre: "Carlos", activo: true, edad: 20 };
+for (let key in datos) {
+    console.log(`Clave: ${key}, Valor: ${datos[key]}`);
+}
+    </pre>
+
+</body>
+</html>
