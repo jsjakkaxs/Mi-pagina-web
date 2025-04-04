@@ -1,0 +1,86 @@
+Estructuras de Control en JavaScript
+Bucle for
+Ejemplo 1: Contar del 1 al 5
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+    
+Ejemplo 2: Sumar los primeros 10 números
+let suma = 0;
+for (let i = 1; i <= 10; i++) {
+    suma += i;
+}
+console.log("Suma total:", suma);
+    
+Ejemplo 3: Recorrer un array de nombres
+let nombres = ["Luis", "Ana", "Carlos"];
+for (let i = 0; i < nombres.length; i++) {
+    console.log(nombres[i]);
+}
+    
+Bucle while
+Ejemplo 1: Contar regresivamente del 5 al 1
+let j = 5;
+while (j > 0) {
+    console.log(j);
+    j--;
+}
+    
+Ejemplo 2: Pedir un número hasta que sea mayor a 10
+let num;
+while (num <= 10) {
+    num = parseInt(prompt("Ingresa un número mayor a 10: "));
+}
+console.log("Número aceptado:", num);
+    
+Ejemplo 3: Leer elementos de un array
+let frutas = ["Manzana", "Pera", "Naranja"];
+let index = 0;
+while (index < frutas.length) {
+    console.log(frutas[index]);
+    index++;
+}
+    
+Bucle do...while
+Ejemplo 1: Pedir un número mayor a 10
+let numero;
+do {
+    numero = parseInt(prompt("Escribe un número mayor a 10: "));
+} while (numero <= 10);
+console.log("Número aceptado:", numero);
+    
+Ejemplo 2: Contador hasta 3
+let contador = 1;
+do {
+    console.log("Iteración:", contador);
+    contador++;
+} while (contador <= 3);
+    
+Ejemplo 3: Generar números aleatorios hasta obtener un 6
+let dado;
+do {
+    dado = Math.floor(Math.random() * 6) + 1;
+    console.log("Número generado:", dado);
+} while (dado !== 6);
+console.log("¡Sacaste un 6!");
+    
+Bucle for...in
+Ejemplo 1: Recorrer un objeto persona
+const persona = { nombre: "Luis", edad: 17, ciudad: "México" };
+for (let clave in persona) {
+    console.log(`${clave}: ${persona[clave]}`);
+}
+    
+Ejemplo 2: Recorrer un objeto de calificaciones
+const calificaciones = { matemáticas: 9, historia: 8, inglés: 10 };
+for (let materia in calificaciones) {
+    console.log(`${materia}: ${calificaciones[materia]}`);
+}
+    
+Ejemplo 3: Recorrer un objeto con diferentes tipos de datos
+const datos = { nombre: "Carlos", activo: true, edad: 20 };
+for (let key in datos) {
+    console.log(`Clave: ${key}, Valor: ${datos[key]}`);
+}
+    
+
